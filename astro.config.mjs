@@ -1,3 +1,6 @@
 import { defineConfig } from "astro/config";
 
-export default defineConfig({ outDir: "./build" });
+export default defineConfig({
+  outDir: "./build",
+  scopedStyleStrategy: "class",
+});
