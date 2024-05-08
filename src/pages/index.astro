@@ -1,20 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import Welcome from "../components/Welcome.astro";
 ---
 
-<Layout>
-  <Header text="Header" />
-  <main>Hello</main>
-  <Footer />
+<Layout title="Title">
+  <Welcome />
 </Layout>
 
-<style>
-  main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-  }
-</style>
+<style></style>

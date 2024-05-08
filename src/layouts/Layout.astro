@@ -1,90 +1,44 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-    />
-    <title>Template</title>
+    <title>{title}</title>
   </head>
   <body>
-    <slot />
+    <main>
+      <slot />
+    </main>
   </body>
 </html>
 
 <style is:global>
-  :root {
-    --white: #fff;
-    --black: #000;
-    --bg: #0d1117;
-    --text: #8b949e;
-    --blue: #58a6ff;
-  }
-
   body {
     margin: 0;
-    background-color: var(--bg);
-    color: var(--text);
-    font-family: "Open Sans", sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    font-family: sans-serif;
   }
 
-  a {
-    color: var(--blue);
-    text-decoration: none;
-    transition: color 0.2s ease-in-out;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  p {
-    margin: 0;
-  }
-
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  input,
-  textarea {
-    margin: 0;
-    color: inherit;
-    font: inherit;
+  main {
+    display: flex;
+    flex-direction: column;
   }
 
   button {
-    margin: 0;
-    color: inherit;
-    font: inherit;
     cursor: pointer;
-  }
-
-  button[disabled] {
-    cursor: not-allowed;
-  }
-
-  table {
-    border-collapse: collapse;
-  }
-
-  ::selection {
-    background-color: var(--blue);
-    color: var(--white);
   }
 </style>
