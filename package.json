@@ -10,8 +10,20 @@
   },
   "dependencies": {
     "@astrojs/check": "0.7.0",
+    "@zhrk/pack": "1.0.53",
     "astro": "4.11.3",
+    "autoprefixer": "10.4.20",
+    "postcss-scss": "4.0.9",
     "sass": "1.77.8",
     "typescript": "5.5.3"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "prettier": "@zhrk/pack/.prettierrc.js",
+  "stylelint": {
+    "extends": "@zhrk/pack/stylelint.config.js"
   }
 }
